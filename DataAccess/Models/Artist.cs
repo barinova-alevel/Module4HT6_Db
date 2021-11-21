@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace DataAccess.Models
 {
-   public class Artist
+    public class Artist
     {
         public int Id { get; set; }
 
@@ -16,5 +16,7 @@ namespace DataAccess.Models
         public string Email { get; set; }
 
         public string InstagramUrl { get; set; }
+
+        public List<ArtistSong> ArtistSongs { get; set; } = new List<ArtistSong>();
     }
 }
