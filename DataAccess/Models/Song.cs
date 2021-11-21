@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Collections.Generic;
 
 namespace DataAccess.Models
 {
@@ -16,5 +16,7 @@ namespace DataAccess.Models
         public int GenreId { get; set; }
 
         public Genre Genre { get; set; }
+
+        public List<ArtistSong> ArtistSongs { get; set; } = new List<ArtistSong>();
     }
 }

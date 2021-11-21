@@ -9,6 +9,6 @@ namespace DataAccess.Models
 
         public string Title { get; set; }
 
-        public List<Song> songs { get; set; } = new List<Song>();
+        public List<Song> Songs { get; set; } = new List<Song>();
     }
 }

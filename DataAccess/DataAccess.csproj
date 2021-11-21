@@ -10,8 +10,4 @@
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="5.0.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Songs\Songs.csproj" />
-  </ItemGroup>
-
 </Project>

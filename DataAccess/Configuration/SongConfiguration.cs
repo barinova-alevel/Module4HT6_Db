@@ -16,7 +16,7 @@ namespace DataAccess.Configuration
             builder.Property(p => p.ReleasedDate).IsRequired().HasColumnName("ReleaseDate");
 
             builder.HasOne(g => g.Genre)
-               .WithMany(s => s.songs)
+               .WithMany(s => s.Songs)
                .HasForeignKey(g => g.Id)
                .OnDelete(DeleteBehavior.Cascade);
 
