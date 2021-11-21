@@ -15,14 +15,14 @@ namespace DataAccess.Configuration
             builder.Property(p => p.ArtistId).IsRequired().HasColumnName("ArtistId");
             builder.Property(p => p.SongId).IsRequired().HasColumnName("SongId");
 
-            builder.HasOne(a => a.Artist)
-                .WithMany(x => x.ArtistSongs)
-                .HasForeignKey(a => a.ArtistId)
+            builder.HasOne(x => x.Artist)
+                .WithMany(a => a.ArtistSongs)
+                .HasForeignKey(x => x.ArtistId)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            builder.HasOne(s => s.Song)
-                .WithMany(x => x.ArtistSongs)
-                .HasForeignKey(s => s.SongId)
+            builder.HasOne(x => x.Song)
+                .WithMany(s => s.ArtistSongs)
+                .HasForeignKey(x => x.SongId)
                 .OnDelete(DeleteBehavior.Cascade);
 
             builder.HasData(new List<ArtistSong>()

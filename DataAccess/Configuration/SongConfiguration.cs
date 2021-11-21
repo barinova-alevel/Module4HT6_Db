@@ -17,7 +17,7 @@ namespace DataAccess.Configuration
 
             builder.HasOne(g => g.Genre)
                .WithMany(s => s.Songs)
-               .HasForeignKey(g => g.Id)
+               .HasForeignKey(s => s.GenreId)
                .OnDelete(DeleteBehavior.Cascade);
 
             builder.HasData(new List<Song>()
